@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //   var pattern = "1_97,5_37,3_42,4 292,2_33, 0 192"
+      //   const arr = pattern.split(",");
+
+      //   console.log(arr)
+      //   console.log(pattern.trim())
+
+      // Regular Expressions
+      // website url for better learning of Regular Expressions https://regexr.com/
+
+      var sampleArr =
+        "I am a Front End Developer I am a Developer Learing Js and will become js Developer";
+      var reges = /Developer/g;
+      console.log(sampleArr.replace(reges, "Master"));
+
+      var pattern = "        1_97,5_37,3_42,4 292,2_33, 0 192     ";
+      console.log(pattern);
+      var arr = pattern
+        .split(",")
+        .map((item) => item.trim())
+        .map((item) => item.split(/[_ ]/)[1])
+        .reverse();
+
+      console.log(arr);
+
+      var dynamicPattern = (dynamicstring, seperator) => {
+        return dynamicstring
+          .split(",")
+          .map((item) => item.trim())
+          .map((item) => item.split(seperator)[1])
+          .reverse();
+      };
+
+      var string = "1_97,5_37,3_42";
+      console.log(dynamicPattern(string, "_"));
+      // Hello git
+    </script>
+  </body>
+</html>

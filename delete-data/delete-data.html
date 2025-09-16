@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="delete-data.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form
+        class="verification-form"
+        name="verification-form"
+        id="sign-up"
+        action=""
+        
+      >
+        <div class="row">
+          <div class="col-md-5">
+            <label for="firstname" class="form-label">First Name</label>
+            <input
+              name="firstname"
+              value="Muhammad Umer"
+              type="text"
+              class="form-control"
+              id="firstname"
+              required
+            />
+          </div>
+          <div class="col-md-5">
+            <label for="lastname" class="form-label">Last Name</label>
+            <input
+              name="lastname"
+              value="Muhammad Saeed"
+              type="text"
+              class="form-control"
+              id="lastname"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="row mt-3">
+          <div class="col-md-5">
+            <label for="username">UserName</label>
+            <input
+              name="username"
+              value="umer.saeed"
+              type="text"
+              class="form-control"
+              id="username"
+              required
+            />
+          </div>
+          <div class="col-md-5">
+            <label for="email">Email</label>
+            <input
+              name="email"
+              value="mianumer1998@gmail.com"
+              type="text"
+              class="form-control"
+              id="email"
+              required
+            />
+          </div>
+          
+        </div>
+        <button class="btn btn-primary mt-3" type="submit">Sign Up</button>
+      </form>
+      <div class="mt-5">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Sr</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Username</th>
+                        <th>Email</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="table-Data">
+                    <tr>
+                        <td class="text-center" colspan="7">No Records Found</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js"
+      integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd"
+      crossorigin="anonymous"
+    ></script>
+    <script src="delete-data.js"></script>
+  </body>
+</html>

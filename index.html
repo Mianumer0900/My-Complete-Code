@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .Table-borderd {
+        border: 1px solid black;
+      }
+      .table-row {
+        padding: 15px;
+        border: 1px solid black;
+      }
+      th {
+        border: 1px solid red;
+        padding: 25px;
+      }
+      td {
+        border: 1px solid blue;
+        padding: 25px;
+      }
+      button {
+        padding: 15px 25px;
+        background-color: red;
+        color: white;
+        border: 1px solid red;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="Table-borderd">
+      <thead>
+        <tr class="table-row">
+          <th>
+            <button value="0" id="btn-0" onclick="onturn(0)">0</button>
+          </th>
+          <th>
+            <button value="1" id="btn-1" onclick="onturn(1)">0</button>
+          </th>
+          <th>
+            <button value="2" id="btn-2" onclick="onturn(2)">0</button>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="table-row">
+          <td>
+            <div>
+              <button value="3" id="btn-3" onclick="onturn(3)">0</button>
+            </div>
+          </td>
+          <td>
+            <div>
+              <button value="4" id="btn-4" onclick="onturn(4)">0</button>
+            </div>
+          </td>
+          <td>
+            <div>
+              <button value="5" id="btn-5" onclick="onturn(5)">0</button>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <div>
+              <button value="6" id="btn-6" onclick="onturn(6)">0</button>
+            </div>
+          </td>
+          <td>
+            <div>
+              <button value="7" id="btn-7" onclick="onturn(7)">0</button>
+            </div>
+          </td>
+          <td>
+            <div>
+              <button value="8" id="btn-8" onclick="onturn(8)">0</button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+  <script>
+    var playerTurn = 1;
+    function onturn(index) {
+      var playerMark;
+      playerMark = playerTurn === 1 ? "O" : "X";
+      playerTurn = playerTurn === 1 ? 2 : 1;
+      console.log("Player Mark", playerMark);
+      console.log(index);
+      var btn = document.getElementById("btn-" + index);
+      btn.disabled = true;
+      btn.innerHTML = playerMark;
+
+      console.log("Button clicked", index);
+    }
+  </script>
+</html>

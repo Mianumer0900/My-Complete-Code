@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>index</title>
+  </head>
+  <body>
+    <script>
+      var psssingmarks = 80;
+      var userRecords = [
+        { name: "Bob", age: 22, marks: 90 },
+        { name: "Mike", age: 30, marks: 80 },
+        { name: "ALina", age: 18, marks: 100 },
+        { name: "BJuliaob", age: 25, marks: 45 },
+        { name: "ALi", age: 25, marks: 75 },
+      ];
+
+      var passStudentsTotalMarks = 0;
+      var newUserRecords = userRecords
+        .map((user) => {
+          console.log(
+            `${user.name} is ${user.age} Years Old and Scored ${user.marks} Marks`
+          );
+          user.marks += 10;
+          user.pass = user.marks >= psssingmarks;
+          return user;
+        })
+        .filter((user) => user.marks >= psssingmarks);
+
+      var userPassRecords = newUserRecords.filter((user) => user.pass);
+      var userFail = newUserRecords.filter((user) => !user.pass);
+      console.log(newUserRecords, userPassRecords, userFail);
+    </script>
+  </body>
+</html>

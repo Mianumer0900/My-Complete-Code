@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Loop -->
+    <script>
+      // var string = "";
+      // for (var i = 0; i <= 15; i++) {
+      //   string += `* ${i}`;
+      // }
+      // console.log(string);
+
+      // for (var i = 2; i < 10; i += 2) {
+      //   console.log(i);
+      // }
+      // for (var i = 3; i < 10; i += 3) {
+      //   console.log(i);
+      // }
+
+      var names = [
+        "name 01",
+        "name 02",
+        "name 03",
+        "name 04",
+        "name 05",
+        "name 06",
+        "name 07",
+      ];
+      var startValue = names.length + 1;
+      var finalValue = names.length + 5;
+      for (var a = startValue; a <= finalValue; a++) {
+        names.push(`names 0${a}`);
+      }
+
+      console.log(names);
+
+      var n = 10;
+      for (var i = 1; i <= n; i++) {
+        var str = "* ";
+        console.log(str.repeat(i));
+      }
+
+      console.log("");
+
+      var stars = (rows) => {
+        for (var i = 1; i <= rows; i++) {
+          var spaces = " ".repeat(rows - i);
+          var check = "* ".repeat(i);
+          console.log(spaces + check);
+        }
+      };
+      stars(10);
+      // console.log("");
+      // var reverseStars = (rows) => {
+      //   for (var i = 1; i <= rows; i++) {
+      //     var check_reverse = "* ".repeat(rows - i);
+      //     var stars_reverse = " ".repeat(i);
+      //     console.log(stars_reverse + check_reverse);
+      //   }
+      // };
+
+      // reverseStars(10);
+
+      var scare = (size) => {
+        let box = "";
+        for (var i = 0; i < size; i++) {
+          for (var j = 0; j < size; j++) {
+            i === 0 || i === size - 1 || j === 0 || j === size - 1
+              ? (box += "*")
+              : (box += " ");
+          }
+          box += "\n";
+        }
+        console.log(box);
+      };
+
+      scare(4);
+    </script>
+  </body>
+</html>

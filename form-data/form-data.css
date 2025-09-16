@@ -1,0 +1,19 @@
+body {
+        background: #2575fc;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .form-layout{
+        background-color: aliceblue;
+        padding: 25px;
+        border-radius: 12px;
+      }
+      .btn-primary{
+        width: 100%;
+      }
+
+      .below-form{
+        margin-top: 25px;
+      }

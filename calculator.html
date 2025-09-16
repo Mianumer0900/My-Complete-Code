@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+        body{
+            margin: 0 auto;
+        }
+        .main-section{
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100vh;
+
+        }
+        .table-calculator {
+            margin: 0 auto;
+            
+        }
+       .head-btn{
+        background-color: red;
+        padding: 20px;
+        color: white;
+        font-size: 20px;
+        width: 150px;
+        border: 1px solid black;
+       }
+       .body-btn{
+        background-color: white;
+        padding: 20px;
+        color: red;
+        font-size: 20px;
+        width: 150px;
+        border: 1px solid black;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="main-section">
+      <div class="action-calculator">
+        <table class="table-calculator">
+          <thead>
+            <tr>
+              <th>
+                <button class="head-btn">AC</button>
+              </th>
+              <th>
+                <button class="head-btn">x</button>
+              </th>
+              <th>
+                <button class="head-btn">%</button>
+              </th>
+              <th>
+                <button class="head-btn">/</button>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><button value="7" class="body-btn">7</button></td>
+              <td><button value="8" class="body-btn">8</button></td>
+              <td><button value="9" class="body-btn">9</button></td>
+              <td><button class="body-btn">X</button></td>
+            </tr>
+            <tr>
+              <td><button value="4" class="body-btn">4</button></td>
+              <td><button value="5" class="body-btn">5</button></td>
+              <td><button value="6" class="body-btn">6</button></td>
+              <td><button class="body-btn">-</button></td>
+            </tr>
+            <tr>
+              <td><button value="1" class="body-btn">1</button></td>
+              <td><button value="2" class="body-btn">2</button></td>
+              <td><button value="3" class="body-btn">3</button></td>
+              <td><button class="body-btn">+</button></td>
+            </tr>
+            <tr>
+              <td><button class="body-btn">#</button></td>
+              <td><button class="body-btn">0</button></td>
+              <td><button class="body-btn">.</button></td>
+              <td><button class="body-btn">=</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
